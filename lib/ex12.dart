@@ -23,12 +23,15 @@ class ex12 extends StatelessWidget {
                 color: Color(0xffffffff),
                 child: Column(
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(50.0),
-                      child: Image.asset(
-                        'assets/images/Gangho-dong.jpg',
-                        fit: BoxFit.cover,
-                        width: 100,
+                    Container(
+                      margin: const EdgeInsets.only(top: 20),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(50.0),
+                        child: Image.asset(
+                          'assets/images/Gangho-dong.jpg',
+                          fit: BoxFit.cover,
+                          width: 100,
+                        ),
                       ),
                     ),
                     Container(
@@ -86,8 +89,10 @@ class ex12 extends StatelessWidget {
               ),
             ),
             Container(
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(30),color: Color(0xffffffff),),
               margin: const EdgeInsets.only(top: 20),
-              color: Color(0xffffffff),
+              //color: Color(0xffffffff),
               width: 280,
               height: 50,
               child: Row(
@@ -108,12 +113,24 @@ class ex12 extends StatelessWidget {
                     width: 250,
                   ),
                   Container(
-                    child: Icon(Icons.chat_bubble),
+                    child: Icon(
+                      Icons.chat_bubble,
+                      color: Color(0xff0000ff),
+                    ),
                   ),
                 ],
               ),
             ),
-            Container()
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: 200,
+              child: ElevatedButton(onPressed: () {}, child: Text('기록')),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: 200,
+              child: ElevatedButton(onPressed: () {}, child: Text('저장위치')),
+            ),
           ],
         ),
         height: 1000,
